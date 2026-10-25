@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Work With Me · Mel Lee — page mockup (Midnight Stage)</title>
+<meta name="theme-color" content="#0B0F1A">
+<link rel="stylesheet" href="styles.css">
+<style>
+  .page-head { padding: 120px 0 72px; position: relative; overflow: hidden; }
+  .page-head::before { content: ''; position: absolute; inset: 0; background: radial-gradient(900px 500px at 85% 0%, rgba(46,196,214,.12), transparent 60%), radial-gradient(700px 400px at 0% 100%, rgba(212,169,60,.08), transparent 60%); }
+  .page-head .wrap { position: relative; }
+  .page-head h1 { font-size: clamp(40px, 5vw, 64px); max-width: 820px; }
+  .ladder { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-top: 44px; }
+  .step { border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; display: flex; gap: 14px; align-items: center; background: rgba(19,26,43,.6); }
+    .step { align-items: flex-start; }
+  .step b { line-height: 1.1; padding-top: 2px; font-family: var(--serif); font-size: 26px; color: var(--gold); }
+  .step span { font-size: 14px; color: var(--muted); }
+  .feature { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+  .feature.flip .feature-media { order: 2; }
+  .feature-media { border-radius: 20px; overflow: hidden; border: 1px solid var(--border); aspect-ratio: 5 / 4; position: relative; }
+  .feature-media img { width: 100%; height: 100%; object-fit: cover; }
+  .feature-media .pricechip { position: absolute; left: 20px; bottom: 20px; background: rgba(11,15,26,.85); border: 1px solid var(--border); border-radius: 999px; padding: 8px 16px; font-family: var(--serif); color: var(--gold); font-size: 18px; }
+  .feature h2 { margin: 14px 0 18px; }
+  .feature p { color: var(--muted); font-size: 18px; }
+  .feature .actions { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 28px; }
+  .mini-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .mini-grid img { aspect-ratio: 4 / 5; object-fit: cover; border-radius: 10px; width: 100%; }
+  .compare { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+  .compare .row { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; border-bottom: 1px solid var(--border); }
+  .compare .row:last-child { border-bottom: 0; }
+  .compare .row > div { padding: 20px 22px; font-size: 15px; }
+  .compare .row.head > div { background: var(--surface); font-weight: 500; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+  .compare .row.head > div.pop { color: var(--gold); }
+  .compare .row > div:first-child { color: var(--text); font-weight: 400; }
+  .compare .row > div:not(:first-child) { color: var(--muted); border-left: 1px solid var(--border); }
+  .compare .ok { color: var(--teal); }
+  @media (max-width: 820px) {
+    .page-head { padding: 72px 0 48px; }
+    .ladder, .feature, .feature.flip { grid-template-columns: 1fr; }
+    .feature.flip .feature-media { order: 0; }
+    .compare .row { grid-template-columns: 1fr; }
+    .compare .row.head { display: none; }
+    .compare .row > div:not(:first-child) { border-left: 0; padding-top: 0; }
+  }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap">
+    <a class="wordmark" href="index.html">Mel Lee<small>The Showgirl Method</small></a>
+    <nav class="nav">
+      <a class="active" href="#">Work With Me</a>
+      <a href="index.html#tutorials">Tutorials</a>
+      <a href="#">Workshops</a>
+      <a href="index.html#about">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div style="display:flex;gap:12px;align-items:center">
+      <a class="btn btn-primary" href="#coaching">Book coaching</a>
+      <button class="burger" aria-label="Menu"><svg width="18" height="12" viewBox="0 0 18 12" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M0 1h18M0 6h18M0 11h18"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-head">
+  <div class="wrap">
+    <div class="eyebrow rise d1">The Showgirl Method</div>
+    <h1 class="rise d2">Three ways to work with me, from £5 to one-to-one.</h1>
+    <p class="lede rise d3" style="margin-top:22px">Start wherever you are. Every step has a clear next one — and every one is available online, anywhere in the world.</p>
+    <div class="ladder rise d4">
+      <a class="step" href="#tutorials"><b>£5+</b><span><strong style="color:var(--text);font-weight:500">Tutorials &amp; Warm-ups</strong><br>Learn at your pace</span></a>
+      <a class="step" href="#feedback"><b>£60</b><span><strong style="color:var(--text);font-weight:500">Performance Feedback</strong><br>Recorded review of your routine</span></a>
+      <a class="step" href="#coaching" style="border-color:rgba(212,169,60,.6)"><b>£90</b><span><strong style="color:var(--text);font-weight:500">Private Coaching</strong><br>Single £90 · Series £350<br><span class="badge" style="margin-top:6px;display:inline-block">Most popular</span></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- Featured collection: Tutorials -->
+<section class="section" id="tutorials" style="padding-top:24px">
+  <div class="wrap">
+    <div class="feature">
+      <div class="feature-media reveal" style="aspect-ratio:auto;border:0;border-radius:0;overflow:visible">
+        <div class="mini-grid">
+          <img src="assets/tut-beep.jpg" alt=""><img src="assets/tut-genie.jpg" alt=""><img src="assets/tut-baby.jpg" alt="">
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="eyebrow">01 · Tutorials &amp; Warm-ups · from £5</div>
+        <h2>Mel's heels choreography, step by step.</h2>
+        <p>Download, practise offline, at your pace, anywhere. Three full routines (Beep, Genie in a Bottle, Baby One More Time) and two 10-minute warm-ups. Add personal video feedback to any tutorial.</p>
+        <div class="actions"><a class="btn btn-primary" href="index.html#tutorials">Browse tutorials <span class="arrow">→</span></a><a class="btn btn-ghost" href="#">Start with a £5 warm-up</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured product: Performance Feedback -->
+<section class="section" id="feedback">
+  <div class="wrap">
+    <div class="feature flip">
+      <div class="feature-media reveal"><img src="assets/blue-kneel.jpg" alt="" style="object-position:center 25%"><div class="pricechip">£60 · 5 working days</div></div>
+      <div class="reveal">
+        <div class="eyebrow">02 · Performance Feedback · £60</div>
+        <h2>Already have a routine? Let's make it unforgettable.</h2>
+        <p>Upload your performance video from wherever you are, tell me what you want to improve, and within five working days you'll receive a recorded video review: what's working, what's hiding your best moments, and exactly what to drill next.</p>
+        <p>Competing? Tell me the criteria and I'll score you like a judge would — because I am one.</p>
+        <div class="actions"><a class="btn btn-primary" href="#">Get feedback on my routine <span class="arrow">→</span></a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured product: Private Coaching with plans -->
+<section class="section" id="coaching" style="background:linear-gradient(180deg,var(--bg),#0E1322 50%,var(--bg))">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <div class="eyebrow gold">03 · Private Coaching · from £90</div>
+      <h2>One session fixes a problem. Four change how you perform.</h2>
+      <p class="lede" style="margin:16px auto 0">Sixty focused minutes, on Zoom or in person when Mel is in your city, on exactly what you need: technique, flexibility, performance or career.</p>
+    </div>
+    <div class="plans">
+      <div class="plan reveal">
+        <div class="plan-name">Single Session</div>
+        <div class="plan-price">£90<small>60 minutes</small></div>
+        <p class="plan-desc">One hour, one goal. Pole technique, flexibility, handstands, performance quality or "how do I actually get booked?" — bring the sticking point and leave with a clear next step.</p>
+        <ul><li>Zoom, or in person across the UK and on tour</li><li>Personal plan for what to drill next</li><li>In-person pole sessions add studio hire at cost</li></ul>
+        <a class="btn btn-secondary" href="#">Book a single session</a>
+      </div>
+      <div class="plan popular reveal">
+        <div class="plan-name">Signature Coaching Series</div>
+        <div class="plan-price">£350<small>4 × 60 minutes · £87.50 a session</small></div>
+        <p class="plan-desc">Four sessions over up to a year, each building on the last, with Mel's eye on your progress in between. For performers preparing an act, a competition or a career move.</p>
+        <ul><li><b>Includes one recorded video review between sessions (worth £60)</b> so you are never training blind</li><li>Priority booking when Mel tours</li><li>Zoom or in person · valid 12 months</li></ul>
+        <a class="btn btn-primary" href="#">Start the Series <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Compare -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="section-head reveal"><div class="eyebrow">Not sure which?</div><h2>Compare in ten seconds.</h2></div>
+    <div class="compare reveal">
+      <div class="row head"><div>You want to…</div><div>Tutorials</div><div>Feedback</div><div class="pop">Coaching</div></div>
+      <div class="row"><div>Learn new heels choreography at my own pace</div><div class="ok">✦ Best fit</div><div>—</div><div>Optional</div></div>
+      <div class="row"><div>Get an honest, judge's-eye review of a routine I already have</div><div>Add-on per tutorial</div><div class="ok">✦ Best fit</div><div>Included in the Series</div></div>
+      <div class="row"><div>Fix a specific technique, flexibility or performance problem</div><div>—</div><div>Identifies it</div><div class="ok">✦ Best fit</div></div>
+      <div class="row"><div>Prepare an act, competition or career move over several months</div><div>—</div><div>—</div><div class="ok">✦ Signature Series</div></div>
+      <div class="row"><div>Where</div><div>Anywhere, offline</div><div>Anywhere, by video</div><div>Zoom worldwide · in person across the UK &amp; on tour</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Meet your coach -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="about">
+      <div class="reveal">
+        <div class="eyebrow">Meet your coach</div>
+        <h2>Rocket scientist turned circus showgirl.</h2>
+        <p>I'm Mel Lee — international showgirl, aerialist and award-winning pole dancer. I've toured with Snoop Dogg, held residencies across Australia, Asia and Europe, and judged more competitions than I can count. I don't have a home studio: I coach online from wherever the tour has taken me, and in person across the UK and whichever city I'm performing in.</p>
+        <a class="btn btn-secondary" href="index.html#about">Read my story <span class="arrow">→</span></a>
+      </div>
+      <div class="about-media reveal" style="padding-right:28px">
+        <img class="main" src="assets/sunset-1.jpg" alt="">
+        <img class="small" src="assets/orange-splits.jpg" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="testimonials">
+      <blockquote class="quote big reveal"><div class="mark">“</div><p>I couldn't recommend Mel more highly! I jump at any chance to book a private class when she's back in town. We pick up exactly where we left off, and I'm always reminded of how much I miss her energy, her coaching and her ability to bring out the best in me.</p><div class="who"><span class="stars">★★★★★</span><b>C. Ang</b> · coaching client, 4 years</div></blockquote>
+      <blockquote class="quote reveal"><div class="mark">“</div><p>From the very first session, I knew I was in incredibly good hands. Mel's teaching style is the perfect blend of clarity, encouragement and patience.</p><div class="who"><span class="stars">★★★★★</span><b>May</b> · 4 years</div></blockquote>
+      <blockquote class="quote reveal"><div class="mark">“</div><p>She isn't just an incredible teacher, but also a phenomenal performer and consummate professional. Her commitment to continually refining her craft is genuinely inspiring.</p><div class="who"><span class="stars">★★★★★</span><b>Cheng</b> · 3 years</div></blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="padding-top:0">
+  <div class="wrap">
+    <div class="faq-layout">
+      <div class="reveal"><div class="eyebrow">Good to know</div><h2>Questions, answered.</h2></div>
+      <div class="faq reveal">
+        <details open><summary>Do I need to be at a certain level?<span class="chev">+</span></summary><p>No. Every session and feedback review is tailored to where you are, from first performance to seasoned pro.</p></details>
+        <details><summary>Where are you based?<span class="chev">+</span></summary><p>Everywhere and nowhere — I tour. Online sessions run on Zoom from anywhere in the world; in-person sessions happen across the UK and in whichever city I'm performing or teaching.</p></details>
+        <details><summary>How does Performance Feedback work?<span class="chev">+</span></summary><p>Buy, upload your video via the link in your receipt, get a recorded review within five working days.</p></details>
+        <details><summary>Why the Signature Series?<span class="chev">+</span></summary><p>Four sessions let us build something — one session fixes a problem, four change how you perform. It includes a recorded video review between sessions and it is what most of my clients choose.</p></details>
+        <details><summary>Can I reschedule?<span class="chev">+</span></summary><p>Once, with 72 hours' notice. Later changes count as a new booking. All sales are final.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <h2>Ready to own the stage?</h2>
+    <p>Pick the level of support you want — a one-off session, the four-session Series, or a recorded review of your routine. Online worldwide, in person across the UK.</p>
+    <div class="actions"><a class="btn btn-dark" href="#coaching">Start the Series <span class="arrow">→</span></a><a class="btn btn-outline btn" href="#feedback">Send me your routine</a></div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div><div class="wordmark" style="margin-bottom:16px">Mel Lee<small>The Showgirl Method</small></div><p>Performance coaching for pole and heels dancers — online worldwide, in person across the UK and on tour.</p></div>
+      <div><h4>Explore</h4><ul><li><a href="#">Work With Me</a></li><li><a href="index.html#tutorials">Tutorials</a></li><li><a href="#">Workshops</a></li><li><a href="index.html#about">About</a></li></ul></div>
+      <div><h4>Help</h4><ul><li><a href="#">Contact</a></li><li><a href="#">FAQ &amp; Policies</a></li><li><a href="#">Booking terms for studios</a></li></ul></div>
+      <div><h4>Follow</h4><ul><li><a href="#">Instagram @melee.x</a></li><li><a href="#">YouTube @Melee.x</a></li></ul></div>
+    </div>
+    <div class="footer-bottom"><div>© 2026 Mel Lee · The Showgirl Method</div><div class="pay"><span>VISA</span><span>MC</span><span>AMEX</span><span>PayPal</span><span>Apple Pay</span></div></div>
+  </div>
+</footer>
+
+<div class="sticky-cta"><div class="label">Private coaching<b>Book coaching · from £90</b></div><a class="btn btn-primary" href="#coaching">Book</a></div>
+<div class="mock-note">Mockup · Work With Me · Midnight Stage</div>
+</body>
+</html>
